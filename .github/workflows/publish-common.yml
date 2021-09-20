@@ -19,9 +19,10 @@ jobs:
       - name: Build Dependencies
         working-directory: ./k-common
         run: yarn install
-      - run : echo ${{ secrets.NPM_TOKEN }}
+      - name: Token Present
+        run : echo ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Publish Package
         working-directory: ./k-common
-        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc && yarn publish
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > ~/.npmrc && yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
