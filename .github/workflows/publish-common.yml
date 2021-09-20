@@ -11,8 +11,9 @@ jobs:
       - name: Publish new version to NPM
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '13.x'
           registry-url: 'https://registry.npmjs.org'
+          always-auth: true
       - name: Install Dependencies
         working-directory: ./k-common
         run: yarn install
