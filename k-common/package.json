@@ -24,5 +24,6 @@
     ],
     "prepublish": "tsc",
     "dependencies": {
+        "k-common": "^1.0.9"
     }
 }
