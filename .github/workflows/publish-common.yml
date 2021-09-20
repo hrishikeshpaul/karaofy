@@ -20,6 +20,7 @@ jobs:
         working-directory: ./k-common
         run: yarn install
       - name: Check Folders
+        working-directory: ./k-common
         run: ls 
       - name: Publish Package
         working-directory: ./k-common
