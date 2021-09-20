@@ -9,18 +9,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish new version to NPM
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
         with:
           node-version: '13.x'
           registry-url: 'https://registry.npmjs.org'
-          always-auth: true
       - name: Install Dependencies
         working-directory: ./k-common
         run: yarn install
       - name: Build Dependencies
         working-directory: ./k-common
         run: yarn install
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_TOKEN }}" > ~/.npmrc
+      - run : echo ${{ secrets.NPM_TOKEN }}
       - name: Publish Package
         working-directory: ./k-common
         run: npm publish
