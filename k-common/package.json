@@ -1,6 +1,6 @@
 {
     "name": "k-common",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -26,6 +26,5 @@
     "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags",
-    "dependencies": {
-    }
+    "dependencies": {}
 }
