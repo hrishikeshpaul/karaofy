@@ -22,9 +22,5 @@
     "files": [
         "dist/**/*"
     ],
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint",
-    "preversion": "npm run lint",
-    "postversion": "git push && git push --tags",
-    "dependencies": {}
+    "prepublish": "tsc"
 }
