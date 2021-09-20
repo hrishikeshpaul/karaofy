@@ -8,20 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Publish new version to NPM
+        uses: actions/setup-node@v2
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@octocat'
       - name: Install Dependencies
         working-directory: ./k-common
         run: yarn install
       - name: Build Dependencies
         working-directory: ./k-common
         run: yarn install
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
       - name: Publish Package
         working-directory: ./k-common
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_TOKEN }}
