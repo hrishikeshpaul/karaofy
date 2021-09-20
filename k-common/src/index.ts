@@ -4,3 +4,5 @@ export interface Common {
     hi: string;
     no: number;
 }
+
+

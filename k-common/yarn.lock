@@ -173,6 +173,13 @@ k-common@^1.0.1:
   resolved "https://registry.yarnpkg.com/k-common/-/k-common-1.0.1.tgz#2b84fc0472af311ea3db54fa3b1fe937a52cb68b"
   integrity sha512-r7UOZx5uVfKpUEnAVCgEaNKcrsqzDM3H22RqA2hKMyCg043J32gk+pjIZ2y6YpLZqEp6oc/Av10p16HJ8mWBUQ==
 
+k-common@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/k-common/-/k-common-1.0.2.tgz#e7b6b112ff0d6c32ff6fbc697ad6194121a77743"
+  integrity sha512-wS+ELvAhQ50q4MBdSF6cwcvsbKaxEKYFBwh2FiIQFmm6tmkB/oVsGQzTCY5sGyNDDv8YfF525a2ULVKsSy7vkw==
+  dependencies:
+    k-common "^1.0.1"
+
 minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"

@@ -20,7 +20,6 @@ jobs:
         working-directory: ./k-common
         run: yarn install
       - name: Token Present
-        run : echo ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Publish Package
         working-directory: ./k-common
         run: echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > ~/.npmrc && yarn publish
