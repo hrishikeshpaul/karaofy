@@ -19,6 +19,8 @@ jobs:
       - name: Build Dependencies
         working-directory: ./k-common
         run: yarn install
+      - name: Check Folders
+        run: ls 
       - name: Publish Package
         working-directory: ./k-common
         run: echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > ~/.npmrc && yarn publish
