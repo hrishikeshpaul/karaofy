@@ -8,15 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v2
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-          # Defaults to the user or organization that owns the workflow file
           scope: '@octocat'
-      - run: yarn install
-      - run: yarn build
-      - run: yarn publish
+      - name: Install Dependencies
+        working-directory: ./k-common
+        run: yarn install
+      - name: Build Dependencies
+        working-directory: ./k-common
+        run: yarn install
+      - name: Publish Package
+        working-directory: ./k-common
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
