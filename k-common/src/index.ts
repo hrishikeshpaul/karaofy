@@ -1,4 +1,4 @@
-export const Greeter = (name: string) => `Hello0 ${name}`;
+export const Greeter = (name: string) => `Hello ${name}`;
 
 export interface Common {
     hi: string;
