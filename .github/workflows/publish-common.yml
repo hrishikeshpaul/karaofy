@@ -20,7 +20,7 @@ jobs:
       - name: Build Dependencies
         working-directory: ./k-common
         run: yarn install
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_TOKEN }}" > ~/.npmrc
       - name: Publish Package
         working-directory: ./k-common
         run: npm publish
